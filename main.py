@@ -18,7 +18,7 @@ st.set_page_config(
 
 st.title("🤖 K-assist ChatBOT")
 
- st.markdown("K-Assist: An AI chatbot powered by Gemini PRO for \n")
+st.markdown("K-Assist: An AI chatbot powered by Gemini PRO for \n")
 st.markdown("Generating human-like text for enhanced communication \n")
 
 
