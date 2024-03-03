@@ -18,14 +18,9 @@ st.set_page_config(
 
 st.title("🤖 K-assist ChatBOT")
 
-st.markdown(
-    "K-Assist is a chatbot powered by the Gemini natural language processing model. It generates human-like text, engages in natural conversations, and provides accurate information. With K-Assist, you can"
-"Create unique and coherent text on any topic, enhancing your communication and content creation."
-"Engage in seamless conversations, overcoming language barriers and improving customer interactions."
-"Access a vast knowledge base, retrieving accurate and up-to-date information on a wide range of subjects."
-"Customize K-Assist to meet your specific needs, including setting conversation parameters and integrating with other applications."
-"Empower your text-based communication and information retrieval with K-Assist today. Unlock the power of AI-driven text generation and conversation, and elevate your interactions to new heights"
-)
+ st.markdown("K-Assist: An AI chatbot powered by Gemini PRO for \n")
+st.markdown("Generating human-like text for enhanced communication \n")
+
 
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
