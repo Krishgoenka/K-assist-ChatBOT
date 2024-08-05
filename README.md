@@ -7,9 +7,10 @@ Personalized Responses: K-Assist tailors its responses based on the user's conte
 Streamlit Deployment: K-Assist is deployed using Streamlit, a user-friendly framework that simplifies the process of creating and sharing web applications.
 Getting Started:
 
-To use K-Assist ChatBot, simply visit the deployed Streamlit application at [link to deployed app]. Once the application loads, you can start interacting with the chatbot by typing your queries into the text box at the bottom of the screen.
-The source code for K-Assist ChatBot is available on GitHub at [link to GitHub repo]. This repository includes detailed instructions on how to install and run the chatbot locally.
+To use K-Assist ChatBot, simply visit the deployed Streamlit application at [link to deployed app]. Once the application loads, you can start interacting with the chatbot by typing your queries into the text box at the bottom of the screen. This repository includes detailed instructions on how to install and run the chatbot locally.
 
 Conclusion:
 
 K-Assist ChatBot is a powerful and versatile AI tool that can help users find answers to their questions quickly and easily. With its natural language processing capabilities, comprehensive knowledge base, and user-friendly interface, K-Assist is an invaluable resource for anyone seeking information or engaging in conversation.
+
+link - https://k-assist-chatbot-boqccw3j5rrogazjatcquq.streamlit.app/
