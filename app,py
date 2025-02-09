@@ -1,0 +1,27 @@
+import os
+from flask import Flask, request, jsonify
+import google.generativeai as gen_ai
+from dotenv import load_dotenv
+
+# Load API key from .env
+load_dotenv()
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+
+app = Flask(__name__)
+
+# Gemini API Setup
+gen_ai.configure(api_key=GOOGLE_API_KEY)
+model = gen_ai.GenerativeModel("gemini-pro")
+
+@app.route("/chat", methods=["POST"])
+def chat():
+    data = request.json
+    user_prompt = data.get("text", "")
+
+    # Get response from Gemini Pro
+    response = model.generate_content(user_prompt)
+    
+    return jsonify({"reply": response.text})
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
