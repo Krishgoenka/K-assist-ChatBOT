@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Assist Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        #chatbox {
+            width: 50%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+        input, button {
+            width: 90%;
+            padding: 10px;
+            margin: 10px;
+        }
+        .message {
+            text-align: left;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .user {
+            background: #d1e7fd;
+        }
+        .bot {
+            background: #e8e8e8;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🤖 K-Assist ChatBOT</h1>
+    <p>K-Assist: Powered by Gemini Pro</p>
+
+    <div id="chatbox">
+        <div id="messages"></div>
+        <input type="text" id="userInput" placeholder="Ask me anything...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <script>
+        async function sendMessage() {
+            let inputField = document.getElementById("userInput");
+            let userMessage = inputField.value;
+            inputField.value = "";
+
+            let chatBox = document.getElementById("messages");
+            chatBox.innerHTML += `<div class="message user"><b>You:</b> ${userMessage}</div>`;
+
+            let response = await fetch("https://your-backend-url.com/chat", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ text: userMessage })
+            });
+
+            let data = await response.json();
+            chatBox.innerHTML += `<div class="message bot"><b>K-Assist:</b> ${data.reply}</div>`;
+        }
+    </script>
+
+</body>
+</html>
